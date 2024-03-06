@@ -8,11 +8,12 @@ builder.AddServiceDefaults();
 
 // Add Storage Queue Support
 builder.AddAzureQueueService("queues");
-builder.AddRedisOutputCache("cache");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddOutputCache();
 
 builder.Services.AddHttpClient<TodoApiClient>(client => client.BaseAddress = new("http://apiservice"));
 

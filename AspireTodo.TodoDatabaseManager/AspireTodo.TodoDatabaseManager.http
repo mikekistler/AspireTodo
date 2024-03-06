@@ -1,0 +1,6 @@
+@AspireTodo.TodoDatabaseManager_HostAddress = http://localhost:5008
+
+GET {{AspireTodo.TodoDatabaseManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
