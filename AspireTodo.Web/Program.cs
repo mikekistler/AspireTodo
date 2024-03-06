@@ -5,6 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
+
+// Add Storage Queue Support
+builder.AddAzureQueueService("queues");
 builder.AddRedisOutputCache("cache");
 
 // Add services to the container.
